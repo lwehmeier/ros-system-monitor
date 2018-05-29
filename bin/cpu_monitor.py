@@ -201,7 +201,7 @@ class CPUMonitor():
                     diag_level = max(diag_level, DiagnosticStatus.ERROR)
                     diag_msgs.append('Hot')
             else:
-                diag_level = max(diag_level, DiagnosticStatus.ERROR) # Error if not numeric value
+                diag_level = max(diag_level, DiagnosticStatus.OK) # Error if not numeric value
                 diag_vals.append(KeyValue(key = 'Core %s Temperature' % index, value = tmp))
 
         return diag_vals, diag_msgs, diag_level
